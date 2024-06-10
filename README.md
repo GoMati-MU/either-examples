@@ -1,3 +1,5 @@
 # EITHER USE CASE EXAMPLES
 
-Please check packages `pl.gomati.eithers.example1` and `pl.gomati.eithers.example2` for their respective READMEs and code.
+Please check packages [example1](https://github.com/GoMati-MU/either-examples/tree/master/src/main/java/pl/gomati/eithers/example1) 
+and [example2](https://github.com/GoMati-MU/either-examples/tree/master/src/main/java/pl/gomati/eithers/example1) 
+for their respective READMEs and code.
