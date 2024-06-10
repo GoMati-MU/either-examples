@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+}
+
+group = 'pl.gomati'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+allprojects {
+    ext {
+        //DEPENDENCY VERSIONS
+        lombokVersion = '1.18.32'
+        mockitoJupiterVersion = '5.10.0'
+        jUnitVersion = '5.9.1'
+    }
+}
+
+dependencies {
+
+    //lombok
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: lombokVersion
+    testCompileOnly group: 'org.projectlombok', name: 'lombok', version: lombokVersion
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: lombokVersion
+    testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: lombokVersion
+
+    // functional java
+    implementation 'com.oath.cyclops:cyclops:10.4.1'
+
+    //tests
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: mockitoJupiterVersion
+    testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: mockitoJupiterVersion
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: jUnitVersion
+}
+
+test {
+    useJUnitPlatform()
+}
